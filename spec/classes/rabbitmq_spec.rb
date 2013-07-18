@@ -64,5 +64,19 @@ describe 'rabbitmq' do
       end
     end
 
+    context 'with delete_guest_user set to false' do
+      let(:params) {{ :delete_guest_user => false }}
+      it 'doesnt delete anything' do
+        should_not contain_rabbitmq_user('guest')
+      end
+    end
+
+    context 'with delete_guest_user set to true' do
+      let(:params) {{ :delete_guest_user => true }}
+      it 'deletes the user' do
+        should contain_rabbitmq_user('guest').with_ensure('absent')
+      end
+    end
+
   end
 end
