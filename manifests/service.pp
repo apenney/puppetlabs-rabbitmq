@@ -2,9 +2,6 @@
 #
 #   This class manages the rabbitmq server service itself.
 #
-#   Jeff McCune <jeff@puppetlabs.com>
-#
-#
 # Parameters:
 #
 # Actions:

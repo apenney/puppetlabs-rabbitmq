@@ -30,6 +30,8 @@ class rabbitmq::params {
   $admin_enable             = true
   $erlang_manage            = false
   $management_port          = '15672'
+  $package_apt_pin          = false
+  $package_gpg_key          = 'http://www.rabbitmq.com/rabbitmq-signing-key-public.asc'
   $service_ensure           = 'running'
   $service_manage           = true
   $service_name             = 'rabbitmq-server'
